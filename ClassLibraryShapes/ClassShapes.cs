@@ -50,5 +50,17 @@ namespace ClassLibraryShapes
             kvadrat_square = (perimetr / 4) * (perimetr / 4);
             return kvadrat_square;
         }
+
+
+        /// <summary>
+        /// Плошадь ромба из 2 равносторонних треугольников при заданом периметре
+        /// </summary>
+        /// <param name="perimetr">периметр ромба из 2 равносторонних треугольников</param>
+        /// <returns>площадь ромба из 2 равносторонних треугольников</returns>
+        public static double RombSquare(double perimetr)
+        {
+            double square = perimetr / 4 * Math.Sqrt(3);
+            return square;
+        }
     }
 }
