@@ -70,7 +70,7 @@ namespace ClassLibraryShapes
         /// <returns>площадь ромба из 2 равносторонних треугольников</returns>
         public static double RombSquare(double perimetr)
         {
-            double square = perimetr / 4 * Math.Sqrt(3);
+            double square = (perimetr / 4) * (perimetr / 4) * Math.Sqrt(3) / 2;
             return square;
         }
     }
