@@ -24,5 +24,31 @@ namespace ClassLibraryShapes
             square = (3 * Math.Sqrt(3) * Math.Pow((perimetr / 6), 2)) / 2;
             return square;
         }
+
+
+        /// <summary>
+        /// Плошадь правильного треугольника при заданом периметре
+        /// </summary>
+        /// <param name="perimetr">периметр правильного треугольника</param>
+        /// <returns>площадь правильного треугольника</returns>
+        public static double TriangleSquare(double perimetr)
+        {
+            double treug_square = 0;
+            treug_square = ((perimetr / 3) * (perimetr / 3) * Math.Sqrt(3)) / 4;
+            return treug_square;
+        }
+
+        
+        /// <summary>
+        /// Плошадь квадарата при заданом периметре
+        /// </summary>
+        /// <param name="perimetr">периметр квадарата</param>
+        /// <returns>площадь квадрата</returns>
+        public static double AreaSquare( double perimetr)
+        {
+            double kvadrat_square = 0;
+            kvadrat_square = (perimetr / 4) * (perimetr / 4);
+            return kvadrat_square;
+        }
     }
 }
