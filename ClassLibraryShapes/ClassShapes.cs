@@ -25,6 +25,18 @@ namespace ClassLibraryShapes
             return square;
         }
 
+        /// <summary>
+        /// Вычисление площади круга
+        /// при заданном периметре
+        /// </summary>
+        /// <param name="perimetr">периметр круга</param>
+        /// <returns>площадь круга</returns>
+        public static double CircleSquare(double perimeter)
+        {
+            double square = Math.Pow(perimeter, 2) / (4 * Math.PI);
+
+            return square;
+        }
 
         /// <summary>
         /// Плошадь правильного треугольника при заданом периметре
@@ -38,7 +50,6 @@ namespace ClassLibraryShapes
             return treug_square;
         }
 
-        
         /// <summary>
         /// Плошадь квадарата при заданом периметре
         /// </summary>
