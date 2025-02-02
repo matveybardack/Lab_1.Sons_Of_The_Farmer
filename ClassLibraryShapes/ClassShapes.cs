@@ -33,9 +33,9 @@ namespace ClassLibraryShapes
         /// <returns>площадь круга</returns>
         public static double CircleSquare(double perimeter)
         {
-            double square = Math.Pow(perimeter, 2) / (4 * Math.PI);
-
-            return square;
+            double circleSquare = 0
+            circleSquare = Math.Pow(perimeter, 2) / (4 * Math.PI);
+            return circleSquare;
         }
 
         /// <summary>
@@ -60,18 +60,6 @@ namespace ClassLibraryShapes
             double kvadrat_square = 0;
             kvadrat_square = (perimetr / 4) * (perimetr / 4);
             return kvadrat_square;
-        }
-
-
-        /// <summary>
-        /// Плошадь ромба из 2 равносторонних треугольников при заданом периметре
-        /// </summary>
-        /// <param name="perimetr">периметр ромба из 2 равносторонних треугольников</param>
-        /// <returns>площадь ромба из 2 равносторонних треугольников</returns>
-        public static double RombSquare(double perimetr)
-        {
-            double square = perimetr / 4 * Math.Sqrt(3);
-            return square;
         }
     }
 }
