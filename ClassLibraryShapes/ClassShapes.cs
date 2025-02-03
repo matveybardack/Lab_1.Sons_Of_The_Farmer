@@ -73,5 +73,17 @@ namespace ClassLibraryShapes
             double square = (perimetr / 4) * (perimetr / 4) * Math.Sqrt(3) / 2;
             return square;
         }
+        
+
+        /// <summary>
+        /// Плошадь прямоугольника при заданом периметре
+        /// </summary>
+        /// <param name="perimetr">периметр прямоугольника</param>
+        /// <returns>площадь прямоугольника</returns>
+        public static double Square(double perimetr)
+        {
+            double square = (perimetr * perimetr) / 18;
+            return square;
+        }
     }
 }
