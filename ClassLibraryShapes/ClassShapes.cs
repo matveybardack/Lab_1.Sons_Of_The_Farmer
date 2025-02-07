@@ -64,7 +64,7 @@ namespace ClassLibraryShapes
 
 
         /// <summary>
-        /// Плошадь ромба из 2 равносторонних треугольников при заданом периметре
+        /// Плошадь ромба из 2 равносторонних треугольников при заданном периметре
         /// </summary>
         /// <param name="perimeter">периметр ромба из 2 равносторонних треугольников</param>
         /// <returns>площадь ромба из 2 равносторонних треугольников</returns>
@@ -76,13 +76,25 @@ namespace ClassLibraryShapes
         
 
         /// <summary>
-        /// Плошадь прямоугольника при заданом периметре
+        /// Плошадь прямоугольника при заданном периметре
         /// </summary>
         /// <param name="perimeter">периметр прямоугольника</param>
         /// <returns>площадь прямоугольника</returns>
         public static double Square(double perimeter) // Макс
         {
             double square = (perimeter * perimeter) / 18;
+            return square;
+        }
+
+        ///<summary>
+        ///Площадь правильного многоугольника
+        ///при заданном периметре
+        ///</summary>
+        ///<param name="perimeter">периметр правильного многоугольника</param>
+        ///<returns>площадь правильного многоугольника</returns>
+        public static double PolygonSquare(double perimeter, int sides) //Матвей
+        {
+            double square = Math.Pow(perimeter, 2) * Math.Tan(Math.PI / sides) / (4 * sides);
             return square;
         }
     }
