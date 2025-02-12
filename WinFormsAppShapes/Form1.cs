@@ -70,32 +70,32 @@ namespace WinFormsAppShapes
                     case ("Квадрат"):
                         perimeter = ValueCheck(perimeter);
                         if (perimeter >= 0)
-                            textBoxSquare.Text = (ClassShapes.AreaSquare(perimeter).ToString());
+                            textBoxSquare.Text = (ClassShapes.AreaSquare(perimeter).ToString("#.##"));
                         break;
                     case ("Равносторонний треугольник"):
                         perimeter = ValueCheck(perimeter);
                         if (perimeter >= 0)
-                            textBoxSquare.Text = (ClassShapes.TriangleSquare(perimeter).ToString());
+                            textBoxSquare.Text = (ClassShapes.TriangleSquare(perimeter).ToString("#.##"));
                         break;
                     case ("Ромб из 2-х равносторонних треугольников"):
                         perimeter = ValueCheck(perimeter);
                         if (perimeter >= 0)
-                            textBoxSquare.Text = (ClassShapes.RombSquare(perimeter).ToString());
+                            textBoxSquare.Text = (ClassShapes.RombSquare(perimeter).ToString("#.##"));
                         break;
                     case ("Прямоугольник"):
                         perimeter = ValueCheck(perimeter);
                         if (perimeter >= 0)
-                            textBoxSquare.Text = (ClassShapes.Square(perimeter).ToString());
+                            textBoxSquare.Text = (ClassShapes.Square(perimeter).ToString("#.##"));
                         break;
                     case ("Шестиугольник"):
                         perimeter = ValueCheck(perimeter);
                         if (perimeter >= 0)
-                            textBoxSquare.Text = (ClassShapes.HexagonSquare(perimeter).ToString());
+                            textBoxSquare.Text = (ClassShapes.HexagonSquare(perimeter).ToString("#.##"));
                         break;
                     case ("Круг"):
                         perimeter = ValueCheck(perimeter);
                         if (perimeter >= 0)
-                            textBoxSquare.Text = (ClassShapes.CircleSquare(perimeter).ToString());
+                            textBoxSquare.Text = (ClassShapes.CircleSquare(perimeter).ToString("#.##"));
                         break;
                 }
             }

@@ -20,8 +20,17 @@ namespace ClassLibraryShapes
         /// <returns>площадь правильного шестиугольника</returns>
         public static double HexagonSquare(double perimeter) // Матвей
         {
-            double square = 0;
-            square = (3 * Math.Sqrt(3) * Math.Pow((perimeter / 6), 2)) / 2;
+            //сторона шестиугольника
+            double a = perimeter / 6;
+
+            //синус угла треугольника, построенного на стороне шестиугольника и центре вписанной окружности
+            double sin = Math.Sqrt(3) / 2;
+
+            //площадь треугольника, построенного на стороне шестиугольника и центре вписанной окружности
+            double triangle_square = a * sin / 2;
+
+            //площадь шестиугольника
+            double square = triangle_square * 6;
             return square;
         }
 
@@ -33,8 +42,7 @@ namespace ClassLibraryShapes
         /// <returns>площадь круга</returns>
         public static double CircleSquare(double perimeter) // Егор
         {
-            double circleSquare = 0;
-            circleSquare = Math.Pow(perimeter, 2) / (4 * Math.PI);
+            double circleSquare = Math.Pow(perimeter, 2) / (4 * Math.PI);
             return circleSquare;
         }
 
@@ -45,8 +53,14 @@ namespace ClassLibraryShapes
         /// <returns>площадь правильного треугольника</returns>
         public static double TriangleSquare(double perimeter) // Амон
         {
-            double treug_square = 0;
-            treug_square = ((perimeter / 3) * (perimeter / 3) * Math.Sqrt(3)) / 4;
+            //сторона треугольника
+            double a = perimeter / 3;
+
+            //синус угла треугольника
+            double sin = Math.Sqrt(3) / 2;
+
+            //площадь треугольника
+            double treug_square = Math.Pow(a, 2) * sin / 2;
             return treug_square;
         }
 
@@ -57,8 +71,11 @@ namespace ClassLibraryShapes
         /// <returns>площадь квадрата</returns>
         public static double AreaSquare( double perimeter) // Амон
         {
-            double kvadrat_square = 0;
-            kvadrat_square = (perimeter / 4) * (perimeter / 4);
+            //сторона квадрата
+            double a = perimeter / 4;
+
+            //площадь квадрата
+            double kvadrat_square = Math.Pow(a, 2);
             return kvadrat_square;
         }
 
@@ -70,7 +87,14 @@ namespace ClassLibraryShapes
         /// <returns>площадь ромба из 2 равносторонних треугольников</returns>
         public static double RombSquare(double perimeter) // Артем
         {
-            double square = (perimeter / 4) * (perimeter / 4) * Math.Sqrt(3) / 2;
+            //сторона ромба
+            double a = perimeter / 4;
+
+            //синус угла ромба
+            double sin = Math.Sqrt(3) / 2;
+
+            //площадь ромба
+            double square = Math.Pow(a, 2) * sin;
             return square;
         }
         
@@ -82,7 +106,14 @@ namespace ClassLibraryShapes
         /// <returns>площадь прямоугольника</returns>
         public static double Square(double perimeter) // Макс
         {
-            double square = (perimeter * perimeter) / 18;
+            //меньшая сторона прямоугольника
+            double less_a = perimeter / 6;
+
+            //большая сторона прямоугольника
+            double more_a = less_a * 2;
+
+            //площадь прямоугольника
+            double square = less_a * more_a;
             return square;
         }
 
@@ -94,7 +125,22 @@ namespace ClassLibraryShapes
         ///<returns>площадь правильного многоугольника</returns>
         public static double PolygonSquare(double perimeter, int sides) //Матвей
         {
-            double square = Math.Pow(perimeter, 2) * Math.Tan(Math.PI / sides) / (4 * sides);
+            //длина стороны
+            double a = perimeter / sides;
+
+            //котангенс угла при вершине, находящейся в центре вписанной в n-угольник окружности, прямоугольного треугольника,
+            //построенного на стороне n-угольника
+            double ctg_alfa = 1 / Math.Tan(Math.PI / sides);
+
+            //радиус вписанной окружности
+            double r = (a / 2) * ctg_alfa;
+
+            //площадь треугольника, построенного на стороне n-угольника и центре вписанной в n-угольник окружности
+            double triangle_square = r * a / 2;
+
+            //площадь правильного многоугольника
+            double square = triangle_square * sides;
+
             return square;
         }
     }
