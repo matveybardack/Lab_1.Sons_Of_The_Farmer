@@ -27,7 +27,7 @@ namespace ClassLibraryShapes
             double sin = Math.Sqrt(3) / 2;
 
             //площадь треугольника, построенного на стороне шестиугольника и центре вписанной окружности
-            double triangle_square = a * sin / 2;
+            double triangle_square = a * a * sin / 2;
 
             //площадь шестиугольника
             double square = triangle_square * 6;
